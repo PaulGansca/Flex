@@ -24,7 +24,7 @@ function App() {
               <BreakTheMold />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1.3} speed={1}>
+          <ParallaxLayer offset={1.4} speed={1}>
             <WhatMakesUsGoodSection />
           </ParallaxLayer>
         </Parallax>
