@@ -21,7 +21,7 @@ export const LandingHero = () => {
     return () => document.removeEventListener('scroll', onScroll, true);
   });
   return (
-    <div className="lg:px-[7.5%] 2xl:px-[10%] lg:pt-0 xl:pb-56 md:pt-64 pt-48">
+    <div className="lg:px-[7.5%] 2xl:px-[10%] lg:pt-0 xl:pb-56 md:pt-96 pt-72">
       <div className="flex justify-center items-center  pointer-events-none relative landing-hero">
         <InfiniteLooper
           className="h-[100vh] max-w-[60%] pl-20 pr-10 hidden lg:block"

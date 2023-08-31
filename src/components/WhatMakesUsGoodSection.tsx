@@ -2,7 +2,7 @@ import React from 'react';
 
 export const WhatMakesUsGoodSection = () => {
   return (
-    <div className="h-100% py-[10rem] px-[7.5%] bg-gradient-to-r from-fuchsia-600 to-pink-600 relative mt-4">
+    <div className="h-100% md:mt-16 sm:mt-44 bigPhone:mt-52 phone:mt-60 py-[10rem] px-[7.5%] bg-gradient-to-r from-fuchsia-600 to-pink-600 relative">
       <p className="text-5xl font-semibold mb-8 w-[80%] max-w-[15ch]">
         What makes us sooo good at it…
       </p>

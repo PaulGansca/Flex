@@ -19,12 +19,12 @@ function App() {
           <ParallaxLayer offset={0} speed={0}>
             <LandingHero />
           </ParallaxLayer>
-          <ParallaxLayer factor={1} offset={0.99} speed={1.1}>
-            <div className="mt-2">
+          <ParallaxLayer offset={0.99} speed={0.9}>
+            <div className="mt-2 z-10">
               <BreakTheMold />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1.4} speed={1}>
+          <ParallaxLayer offset={1.1} speed={1}>
             <WhatMakesUsGoodSection />
           </ParallaxLayer>
         </Parallax>
