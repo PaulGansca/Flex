@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="bg-white h-screen w-screen">
       <div style={{ width: '100%', height: '100% ' }}>
-        <Parallax ref={parallax} pages={3}>
+        <Parallax ref={parallax} pages={4}>
           <ParallaxLayer sticky={{ start: 0, end: 3 }} offset={0} speed={0}>
             <Navbar />
           </ParallaxLayer>
@@ -28,7 +28,7 @@ function App() {
           <ParallaxLayer offset={1.1} speed={1.1}>
             <WhatMakesUsGoodSection />
           </ParallaxLayer>
-          <ParallaxLayer offset={1.99} speed={1.2}>
+          <ParallaxLayer offset={1.9} speed={1.2}>
             <ProjectWorkflow />
           </ParallaxLayer>
         </Parallax>

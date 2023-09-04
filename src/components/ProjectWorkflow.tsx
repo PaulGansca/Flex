@@ -14,7 +14,7 @@ export const ProjectWorkflow = () => {
   return (
     <div
       ref={ref}
-      className="project-workflow md:flex md:gap-8 md:mt-16 sm:mt-44 bigPhone:mt-48 phone:mt-60 md:justify-between py-[6rem] sm:py-[10rem] px-[7.5%] bg-white relative text-black"
+      className="project-workflow md:flex md:gap-8 md:mt-16 sm:mt-44 bigPhone:mt-48 phone:mt-[30rem] md:justify-between py-[6rem] sm:py-[10rem] px-[7.5%] bg-white relative text-black"
     >
       <p
         className={`text-5xl md:text-7xl md:mb-0 md:w-[45%] font-bold font-title mb-16 sm:mb-8 ${
