@@ -6,6 +6,7 @@ import { Navbar } from './components/Navbar';
 import { WhatMakesUsGoodSection } from './components/WhatMakesUsGoodSection';
 import { useRef } from 'react';
 import { BreakTheMold } from './components/BreakTheMold';
+import { ProjectWorkflow } from './components/ProjectWorkflow';
 
 function App() {
   const parallax = useRef<IParallax>(null!);
@@ -24,8 +25,11 @@ function App() {
               <BreakTheMold />
             </div>
           </ParallaxLayer>
-          <ParallaxLayer offset={1.1} speed={1}>
+          <ParallaxLayer offset={1.1} speed={1.1}>
             <WhatMakesUsGoodSection />
+          </ParallaxLayer>
+          <ParallaxLayer offset={1.99} speed={1.2}>
+            <ProjectWorkflow />
           </ParallaxLayer>
         </Parallax>
       </div>

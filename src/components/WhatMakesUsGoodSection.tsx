@@ -14,7 +14,7 @@ export const WhatMakesUsGoodSection = () => {
   return (
     <div
       ref={ref}
-      className="what-makes-us-good lg:flex lg:gap-8 md:mt-16 sm:mt-44 bigPhone:mt-48 phone:mt-60 py-[6rem] sm:py-[10rem] px-[7.5%] bg-gradient-to-r from-fuchsia-600 to-pink-600 relative"
+      className="what-makes-us-good lg:flex lg:gap-8 md:mt-16 sm:mt-44 bigPhone:mt-44 phone:mt-52 py-[4rem] sm:py-[10rem] px-[7.5%] bg-gradient-to-r from-fuchsia-600 to-pink-600 relative"
     >
       <p
         className={`text-5xl lg:text-7xl lg:mb-0 lg:min-w-[33%] font-bold font-title mb-16 sm:mb-8 sm:w-[80%] sm:max-w-[15ch] ${

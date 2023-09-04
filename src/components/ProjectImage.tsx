@@ -1,4 +1,3 @@
-import React from 'react';
 import Gocek from '../assets/Gocek.jpg';
 
 export const ProjectImage = ({ className }) => {
