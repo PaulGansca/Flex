@@ -103,14 +103,26 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.landing-hero .hero-text.show-text.mounted {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 600ms;
+}
+
+.landing-hero .hero-text.show-text.first-render {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 600ms, opacity 600ms;
+}
+
 .landing-hero .hero-text.show-text {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0s linear 0s, opacity 300ms;
+  transition: visibility 0s linear 0s, opacity 500ms;
 }
 
 .landing-hero .hero-text.hide-text {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 300ms, opacity 300ms;
+  transition: visibility 0s linear 500ms, opacity 500ms;
 }

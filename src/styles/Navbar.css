@@ -66,8 +66,38 @@ a {
   /* margin-right: 14px; */
   margin-top: -2px;
   text-align: right;
-  transition: transform 0.5s ease-out;
-  -webkit-transition: transform 0.5s ease-out;
+}
+#navbar .desktop-navbar-list.first-render {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50px);
+  transition: transform 600ms, visibility 0s linear 600ms, opacity 600ms;
+  -webkit-transition: transform 600ms, visibility 0s linear 600ms, opacity 600ms;
+}
+
+#navbar .desktop-navbar-list.mounted {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+  transition: transform 600ms, visibility 0s linear 0s, opacity 600ms;
+  -webkit-transition: transform 600ms, visibility 0s linear 0s, opacity 600ms;
+  transition-delay: 200ms;
+}
+
+#navbar .logo.first-render {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50px);
+  transition: transform 300ms, visibility 0s linear 300ms, opacity 300ms;
+  -webkit-transition: transform 300ms, visibility 0s linear 300ms, opacity 300ms;
+}
+
+#navbar .logo.mounted {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+  transition: transform 300ms, visibility 0s linear 0s, opacity 300ms;
+  -webkit-transition: transform 300ms, visibility 0s linear 0s, opacity 300ms;
 }
 @media (max-width: 640px) {
   #navbar ul {

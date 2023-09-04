@@ -4,10 +4,10 @@ export const BreakTheMold = () => {
   return (
     <div className="flex flex-wrap lg:justify-center lg:items-center lg:px-40 lg:py-[20.5%] w-full pt-28 pb-20 px-7 sm:pb-56 sm:pt-48 sm:px-[7.5%] justify-around items-start bg-white">
       <div className="w-full flex flex-wrap justify-between items-center">
-        <h2 className="w-full max-w-full sm:w-[45%] text-5xl sm:text-6xl mb-12 sm:mb-6 font-bold sm:max-w-[11ch] text-gray-900">
+        <h2 className="w-full max-w-full sm:w-[45%] text-5xl sm:text-6xl mb-12 sm:mb-6 font-bold font-title sm:max-w-[11ch] text-gray-900">
           Beautiful websites that break the mold
         </h2>
-        <div className="sm:w-[45%] w-full">
+        <div className="sm:w-[45%] w-full font-body">
           <p className="text-xl mb-6 text-gray-900">
             Your website’s your opportunity to stand out. So why settle for
             something bland?

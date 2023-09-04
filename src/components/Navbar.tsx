@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import '../styles/Navbar.css';
 
@@ -6,7 +6,7 @@ import '../styles/Navbar.css';
 
 export const Navbar = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
-
+  const [loadAnimationOnMount, setLoadAnimationOnMount] = React.useState(false);
   const handleShowNavbar = () => {
     if (!showNavbar) {
       document
@@ -28,17 +28,30 @@ export const Navbar = () => {
     setShowNavbar(!showNavbar);
   };
 
+  useEffect(() => {
+    setTimeout(() => setLoadAnimationOnMount(true), 10);
+  }, []);
+
   return (
     <>
       <nav id="navbar">
-        <div className="nav-wrapper">
-          <div className="logo">
+        <div className="nav-wrapper font-title">
+          <div
+            className={`logo ${
+              loadAnimationOnMount ? 'mounted' : 'first-render'
+            }`}
+          >
             <a href="#home">
               <i className="fas fa-chess-knight"></i> FLEX
             </a>
           </div>
 
-          <ul id="menu">
+          <ul
+            className={`${
+              loadAnimationOnMount ? 'mounted' : 'first-render'
+            } desktop-navbar-list`}
+            id="menu"
+          >
             <li>
               <a href="#home">Home</a>
             </li>

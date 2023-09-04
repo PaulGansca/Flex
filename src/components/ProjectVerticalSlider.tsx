@@ -36,20 +36,23 @@ export const InfiniteLooper = function InfiniteLooper({
   const setupInstances = useCallback(() => {
     if (!innerRef?.current || !outerRef?.current) return;
     if (vertical) {
-      const { height } = innerRef.current.getBoundingClientRect();
+      if (looperInstances < 3) {
+        const { height } = innerRef.current.getBoundingClientRect();
 
-      const { height: parentHeight } = outerRef.current.getBoundingClientRect();
+        const { height: parentHeight } =
+          outerRef.current.getBoundingClientRect();
 
-      const heightDeficit = parentHeight - height;
+        const heightDeficit = parentHeight - height;
 
-      const instanceHeight = height / innerRef.current.children.length;
+        const instanceHeight = height / innerRef.current.children.length;
 
-      if (heightDeficit) {
-        setLooperInstances(
-          looperInstances + Math.ceil(heightDeficit / instanceHeight) + 1
-        );
+        if (heightDeficit) {
+          setLooperInstances(
+            looperInstances + Math.ceil(heightDeficit / instanceHeight) + 1
+          );
+        }
+        resetAnimation();
       }
-      resetAnimation();
     } else {
       const { width } = innerRef.current.getBoundingClientRect();
 

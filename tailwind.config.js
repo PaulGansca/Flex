@@ -7,6 +7,10 @@ export default {
         phone: '360px',
         bigPhone: '450px',
       },
+      fontFamily: {
+        title: ['Hind'],
+        body: ['Cambay'],
+      },
     },
   },
   plugins: [],
