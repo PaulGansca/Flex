@@ -144,7 +144,7 @@ a {
   width: 0%;
   height: 1px;
   bottom: -1px;
-  background: rgb(13, 26, 38);
+  background: rgb(28, 121, 184);
 }
 
 #navbar li a:before {
@@ -153,13 +153,13 @@ a {
 }
 
 #navbar li a:after {
-  background: rgb(13, 26, 38);
+  background: rgb(28, 121, 184);
   right: 0;
   /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
 }
 
 #navbar li a:hover:before {
-  background: rgb(13, 26, 38);
+  background: rgb(28, 121, 184);
   width: 100%;
   transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
 }
