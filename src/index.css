@@ -20,7 +20,8 @@
 }
 
 .break-the-mold .first-render,
-.what-makes-us-good .first-render {
+.what-makes-us-good .first-render,
+.project-workflow .first-render {
   opacity: 0;
   visibility: hidden;
   transition: visibility 0s linear 600ms, opacity 600ms;
@@ -28,7 +29,8 @@
 }
 
 .break-the-mold .mounted,
-.what-makes-us-good .mounted {
+.what-makes-us-good .mounted,
+.project-workflow .mounted {
   opacity: 1;
   visibility: visible;
   transition: visibility 0s linear 0s, opacity 600ms;
