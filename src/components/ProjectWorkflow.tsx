@@ -11,6 +11,7 @@ export const ProjectWorkflow = () => {
   const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0.2,
+    triggerOnce: true,
   });
   React.useEffect(() => {
     if (inView) setTimeout(() => setLoadAnimationOnMount(true), 10);
@@ -19,28 +20,30 @@ export const ProjectWorkflow = () => {
   return (
     <div
       ref={ref}
-      className="project-workflow py-[6rem] sm:py-[10rem] px-[7.5%] bg-white relative text-black"
+      className="project-workflow py-[6rem] sm:py-[10rem] lg:py-64 lg:px-[12%] px-[7.5%] bg-white relative text-black"
     >
       <div
-        className={`md:flex md:gap-8 md:justify-between ${
+        className={`md:flex md:gap-8 md:justify-between  ${
           loadAnimationOnMount ? 'mounted' : 'first-render'
         }`}
       >
         <p
-          className={`text-5xl md:text-7xl md:mb-0 md:w-[45%] font-bold font-title mb-16 sm:mb-8 ${
+          className={`text-5xl md:text-7xl xl:text-8xl md:mb-0 md:w-[45%] font-bold font-title mb-16 sm:mb-8 ${
             loadAnimationOnMount ? 'mounted' : 'first-render'
           }`}
         >
           Project Workflow
         </p>
-        <p className="md:w-[45%] font-body w-full">
+        <p className="md:w-[45%] font-body xl:text-xl w-full">
           This shows the stages of our typical website design and development
           process, from the initial kick-off meeting all the way to launch day.
           Our project managers will work with you every step of the way to
           ensure you have visibility over this process.
         </p>
       </div>
-      <div className={`mt-16 flex gap-6 w-full overflow-auto`}>
+      <div
+        className={`mt-24 flex gap-6 w-full overflow-auto project-workflow-list`}
+      >
         <WorkflowStep stepNumber={'01'} content={'Meeting with Stakeholders'} />
         <WorkflowStep
           stepNumber={'02'}
@@ -76,7 +79,7 @@ export const ProjectWorkflow = () => {
         </div>
       </div>
       <div className="flex justify-around sm:justify-start items-start flex-wrap">
-        <h1 className="font-title text-6xl mt-10">Featured Projects</h1>
+        <h1 className="font-title text-6xl mt-24">Featured Projects</h1>
         <div className="flex flex-wrap justify-between items-center w-full pt-4 pb-20 sm:pb-60">
           <FeaturedProject
             img={Gocek}

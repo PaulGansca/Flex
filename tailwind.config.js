@@ -6,6 +6,7 @@ export default {
       screens: {
         phone: '360px',
         bigPhone: '450px',
+        smallTablet: '550px',
       },
       fontFamily: {
         title: ['Hind'],

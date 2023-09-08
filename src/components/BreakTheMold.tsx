@@ -6,6 +6,7 @@ export const BreakTheMold = () => {
   const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0.2,
+    triggerOnce: true,
   });
   React.useEffect(() => {
     if (inView) setTimeout(() => setLoadAnimationOnMount(true), 10);
@@ -18,7 +19,7 @@ export const BreakTheMold = () => {
     >
       <div className="w-full flex flex-wrap justify-between items-center">
         <h2
-          className={`w-full max-w-full sm:w-[45%] text-5xl sm:text-6xl mb-12 sm:mb-6 font-bold font-title sm:max-w-[11ch] text-gray-900 ${
+          className={`w-full max-w-full sm:w-[45%] text-5xl sm:text-6xl lg:text-7xl mb-12 sm:mb-6 font-bold font-title sm:max-w-[11ch] text-gray-900 ${
             loadAnimationOnMount ? 'mounted' : 'first-render'
           }`}
         >
