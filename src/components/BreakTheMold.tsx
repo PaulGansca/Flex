@@ -15,7 +15,7 @@ export const BreakTheMold = () => {
   return (
     <div
       ref={ref}
-      className="break-the-mold flex flex-wrap lg:justify-center lg:items-center lg:px-40 lg:py-[20.5%] w-full pt-28 pb-20 px-7 sm:pb-56 sm:pt-48 sm:px-[7.5%] justify-around items-start bg-white"
+      className="break-the-mold section flex flex-wrap lg:justify-center lg:items-center lg:px-40 lg:py-[20.5%] w-full pt-28 pb-20 px-7 sm:pb-56 sm:pt-48 sm:px-[7.5%] justify-around items-start bg-white"
     >
       <div className="w-full flex flex-wrap justify-between items-center">
         <h2

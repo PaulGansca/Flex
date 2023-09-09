@@ -52,7 +52,7 @@ export const WhatWeDo = () => {
     else setLoadAnimationOnMount4(false);
   }, [inView4]);
   return (
-    <div className="project-workflow py-[6rem] sm:py-[10rem] px-[7.5%] bg-black relative text-white">
+    <div className="project-workflow section py-[6rem] sm:py-[10rem] px-[7.5%] bg-black relative text-white">
       <div
         ref={ref1}
         className={`sm:flex sm:gap-8 sm:justify-between ${

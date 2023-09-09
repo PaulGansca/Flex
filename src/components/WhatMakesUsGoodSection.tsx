@@ -13,7 +13,7 @@ export const WhatMakesUsGoodSection = () => {
     else setLoadAnimationOnMount(false);
   }, [inView]);
   return (
-    <div className="xl:h-screen bg-gradient-to-r from-cyan-500 to-blue-500">
+    <div className="xl:h-screen section bg-gradient-to-r from-cyan-500 to-blue-500">
       <div
         ref={ref}
         className="what-makes-us-good lg:flex lg:gap-8 py-[4rem] sm:py-[10rem] px-[7.5%] relative xl:-translate-x-1/2 xl:-translate-y-1/2 xl:left-1/2 xl:top-1/2"
