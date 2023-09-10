@@ -1,23 +1,43 @@
 import React from 'react';
 import { InfiniteLooper } from './ProjectVerticalSlider';
 import { ProjectImage } from './ProjectImage';
+import { SmallProjectImage } from './SmallProjectImage';
 
 export const LandingHero = () => {
   const [loadAnimationOnMount, setLoadAnimationOnMount] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(true);
+  const [direction, setDirection] = React.useState<'left' | 'right' | null>(
+    null
+  );
   const textRef = React.useRef<HTMLDivElement | null>(null);
+  const lastScrollTop = React.useRef(0);
   const onScroll = () => {
     if (
       textRef?.current?.getBoundingClientRect() &&
-      textRef?.current?.getBoundingClientRect().top < 120
+      textRef?.current?.getBoundingClientRect().top < -300
     ) {
       setIsVisible(false);
     } else {
       setIsVisible(true);
     }
+    if (
+      Number(textRef?.current?.getBoundingClientRect().top) >
+      lastScrollTop.current
+    ) {
+      setDirection('left');
+    } else {
+      setDirection('right');
+    }
+    lastScrollTop.current = Number(
+      textRef?.current?.getBoundingClientRect().top
+    );
+    console.log(textRef?.current?.getBoundingClientRect().top);
   };
 
   React.useEffect(() => {
+    lastScrollTop.current = Number(
+      textRef?.current?.getBoundingClientRect().top
+    );
     setTimeout(() => setLoadAnimationOnMount(true), 10);
   }, []);
 
@@ -26,7 +46,7 @@ export const LandingHero = () => {
     return () => document.removeEventListener('scroll', onScroll, true);
   }, []);
   return (
-    <div className="lg:px-[7.5%] section 2xl:px-[10%]  min-h-screen lg:pt-0 md:pt-96 pt-[25vh] bg-white">
+    <div className="lg:px-[7.5%] section 2xl:px-[10%] lg:min-h-screen lg:pt-0 pt-[15vh] bg-white">
       <div className="flex justify-center items-center  pointer-events-none relative landing-hero">
         <InfiniteLooper
           className="h-[100vh] max-w-[60%] pl-20 pr-10 hidden lg:block"
@@ -59,6 +79,60 @@ export const LandingHero = () => {
           </div>
         </div>
       </div>
+      <InfiniteLooper
+        className={`p-4 lg:hidden ${
+          direction === 'left' || !direction
+            ? 'visible relative'
+            : 'invisible absolute'
+        }`}
+        speed={20}
+        direction={'left'}
+      >
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+      </InfiniteLooper>
+      <InfiniteLooper
+        className={`p-4 lg:hidden ${
+          direction === 'right' ? 'visible relative' : 'invisible absolute'
+        }`}
+        speed={20}
+        direction={'right'}
+      >
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+        <SmallProjectImage
+          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+        />
+      </InfiniteLooper>
     </div>
   );
 };
