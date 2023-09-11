@@ -1,23 +1,21 @@
-import './App.css';
-import { LandingHero } from './components/LandingHero';
-import { Navbar } from './components/Navbar';
-import { WhatMakesUsGoodSection } from './components/WhatMakesUsGoodSection';
-import { BreakTheMold } from './components/BreakTheMold';
-import { ProjectWorkflow } from './components/ProjectWorkflow';
-import { WhatWeDo } from './components/WhatWeDo';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import HomePage from "./pages/Home";
+import OurWorkPage from "./pages/OurWork";
 
 function App() {
   return (
-    <div className="">
-      <div>
-        <Navbar />
-        <LandingHero />
-        <BreakTheMold />
-        <WhatMakesUsGoodSection />
-        <WhatWeDo />
-        <ProjectWorkflow />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="our-work" element={<OurWorkPage />} />
+          {/* <Route path="contact" element={<Contact />} /> */}
+          {/* <Route path="*" element={<NoPage />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

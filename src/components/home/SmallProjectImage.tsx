@@ -1,4 +1,4 @@
-import Gocek from '../assets/Gocek.jpg';
+import Gocek from "../../assets/Gocek.jpg";
 
 export const SmallProjectImage = ({ className }) => {
   return (

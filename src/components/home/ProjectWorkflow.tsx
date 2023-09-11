@@ -1,22 +1,12 @@
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
-import { WorkflowStep } from './WorkflowStep';
-import { PlayIcon } from './PlayIcon';
-import { FeaturedProject } from './FeaturedProject';
-import Gocek from '../assets/Gocek.jpg';
-import BodySculpt from '../assets/WorkoutPage.jpg';
+import { WorkflowStep } from "./WorkflowStep";
+import { PlayIcon } from "./PlayIcon";
+import { FeaturedProject } from "../FeaturedProject";
+import Gocek from "../../assets/Gocek.jpg";
+import BodySculpt from "../../assets/WorkoutPage.jpg";
+import useLoadAnimation from "../../hooks/useLoadAnimation";
 
 export const ProjectWorkflow = () => {
-  const [loadAnimationOnMount, setLoadAnimationOnMount] = React.useState(false);
-  const [ref, inView] = useInView({
-    /* Optional options */
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-  React.useEffect(() => {
-    if (inView) setTimeout(() => setLoadAnimationOnMount(true), 10);
-    else setLoadAnimationOnMount(false);
-  }, [inView]);
+  const { loadAnimationOnMount, ref } = useLoadAnimation();
   return (
     <div
       ref={ref}
@@ -24,12 +14,12 @@ export const ProjectWorkflow = () => {
     >
       <div
         className={`md:flex md:gap-8 md:justify-between  ${
-          loadAnimationOnMount ? 'mounted' : 'first-render'
+          loadAnimationOnMount ? "mounted" : "first-render"
         }`}
       >
         <p
           className={`text-5xl md:text-7xl xl:text-8xl md:mb-0 md:w-[45%] font-bold font-title mb-16 sm:mb-8 ${
-            loadAnimationOnMount ? 'mounted' : 'first-render'
+            loadAnimationOnMount ? "mounted" : "first-render"
           }`}
         >
           Project Workflow
@@ -44,16 +34,16 @@ export const ProjectWorkflow = () => {
       <div
         className={`mt-24 flex gap-6 w-full overflow-auto project-workflow-list`}
       >
-        <WorkflowStep stepNumber={'01'} content={'Meeting with Stakeholders'} />
+        <WorkflowStep stepNumber={"01"} content={"Meeting with Stakeholders"} />
         <WorkflowStep
-          stepNumber={'02'}
-          content={'Wireframing & Figma Prototyping'}
+          stepNumber={"02"}
+          content={"Wireframing & Figma Prototyping"}
         />
-        <WorkflowStep stepNumber={'03'} content={'Functional Requirements'} />
-        <WorkflowStep stepNumber={'04'} content={'Implementation Phase'} />
-        <WorkflowStep stepNumber={'05'} content={'Demo & Optimisation'} />
-        <WorkflowStep stepNumber={'06'} content={'Bug Fixing'} />
-        <WorkflowStep stepNumber={'07'} content={'Go Live!'} />
+        <WorkflowStep stepNumber={"03"} content={"Functional Requirements"} />
+        <WorkflowStep stepNumber={"04"} content={"Implementation Phase"} />
+        <WorkflowStep stepNumber={"05"} content={"Demo & Optimisation"} />
+        <WorkflowStep stepNumber={"06"} content={"Bug Fixing"} />
+        <WorkflowStep stepNumber={"07"} content={"Go Live!"} />
       </div>
       <div className="my-4 flex justify-between w-full items-center">
         <div className="flex justify-center items-center">
@@ -68,7 +58,7 @@ export const ProjectWorkflow = () => {
         <hr className="w-full flex h-1 ml-4 my-4 bg-gradient-to-r from-cyan-500 to-blue-500 border-0 rounded " />
 
         <div className="flex justify-center items-center">
-          {' '}
+          {" "}
           <PlayIcon
             fill="rgb(59 130 246)"
             stroke="rgb(59 130 246)"
@@ -83,7 +73,7 @@ export const ProjectWorkflow = () => {
         <div className="flex flex-wrap justify-between items-center w-full pt-4 pb-20 sm:pb-60">
           <FeaturedProject
             img={Gocek}
-            title={'Gocek Turizsm'}
+            title={"Gocek Turizsm"}
             content={
               "We crafted a beautiful & responsive website that's easy to use for yacht renting, Gocek Turism"
             }
@@ -92,9 +82,9 @@ export const ProjectWorkflow = () => {
           />
           <FeaturedProject
             img={BodySculpt}
-            title={'Body Sculpt'}
+            title={"Body Sculpt"}
             content={
-              'We put together a solution for helping people get in shape effectively, BodySculpt'
+              "We put together a solution for helping people get in shape effectively, BodySculpt"
             }
             width="w-full"
             height="h-full"

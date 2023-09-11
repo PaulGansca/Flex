@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import '../styles/InfiniteLooper.css';
+import "../../styles/InfiniteLooper.css";
 
 const { useState, useEffect, useRef, useCallback } = React;
 
@@ -13,7 +13,7 @@ export const InfiniteLooper = function InfiniteLooper({
 }: {
   speed: number;
   vertical?: boolean;
-  direction: 'right' | 'left';
+  direction: "right" | "left";
   children: React.ReactNode;
   className?: string;
 }) {
@@ -23,11 +23,11 @@ export const InfiniteLooper = function InfiniteLooper({
 
   function resetAnimation() {
     if (innerRef?.current) {
-      innerRef.current.setAttribute('data-animate', 'false');
+      innerRef.current.setAttribute("data-animate", "false");
 
       setTimeout(() => {
         if (innerRef?.current) {
-          innerRef.current.setAttribute('data-animate', 'true');
+          innerRef.current.setAttribute("data-animate", "true");
         }
       }, 10);
     }
@@ -81,12 +81,12 @@ export const InfiniteLooper = function InfiniteLooper({
 
   useEffect(() => {
     if (!vertical) {
-      window.addEventListener('resize', setupInstances);
+      window.addEventListener("resize", setupInstances);
     }
 
     return () => {
       if (!vertical) {
-        window.removeEventListener('resize', setupInstances);
+        window.removeEventListener("resize", setupInstances);
       }
     };
   }, [looperInstances, setupInstances]);
@@ -94,18 +94,18 @@ export const InfiniteLooper = function InfiniteLooper({
   return (
     <div className={`looper ${className}`} ref={outerRef}>
       <div
-        className={`looper__innerList ${vertical ? 'vertical' : ''}`}
+        className={`looper__innerList ${vertical ? "vertical" : ""}`}
         ref={innerRef}
         data-animate="true"
       >
         {[...Array(looperInstances)].map((_, ind) => (
           <div
             key={ind}
-            className={`looper__listInstance ${vertical ? 'vertical' : ''}`}
+            className={`looper__listInstance ${vertical ? "vertical" : ""}`}
             style={{
-              width: vertical ? '100%' : undefined,
+              width: vertical ? "100%" : undefined,
               animationDuration: `${speed}s`,
-              animationDirection: direction === 'right' ? 'reverse' : 'normal',
+              animationDirection: direction === "right" ? "reverse" : "normal",
             }}
           >
             {children}

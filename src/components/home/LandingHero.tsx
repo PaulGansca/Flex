@@ -1,12 +1,12 @@
-import React from 'react';
-import { InfiniteLooper } from './ProjectVerticalSlider';
-import { ProjectImage } from './ProjectImage';
-import { SmallProjectImage } from './SmallProjectImage';
+import React from "react";
+import { InfiniteLooper } from "./ProjectVerticalSlider";
+import { ProjectImage } from "./ProjectImage";
+import { SmallProjectImage } from "./SmallProjectImage";
 
 export const LandingHero = () => {
   const [loadAnimationOnMount, setLoadAnimationOnMount] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(true);
-  const [direction, setDirection] = React.useState<'left' | 'right' | null>(
+  const [direction, setDirection] = React.useState<"left" | "right" | null>(
     null
   );
   const textRef = React.useRef<HTMLDivElement | null>(null);
@@ -24,14 +24,13 @@ export const LandingHero = () => {
       Number(textRef?.current?.getBoundingClientRect().top) >
       lastScrollTop.current
     ) {
-      setDirection('left');
+      setDirection("left");
     } else {
-      setDirection('right');
+      setDirection("right");
     }
     lastScrollTop.current = Number(
       textRef?.current?.getBoundingClientRect().top
     );
-    console.log(textRef?.current?.getBoundingClientRect().top);
   };
 
   React.useEffect(() => {
@@ -42,8 +41,8 @@ export const LandingHero = () => {
   }, []);
 
   React.useEffect(() => {
-    document.addEventListener('scroll', onScroll, true);
-    return () => document.removeEventListener('scroll', onScroll, true);
+    document.addEventListener("scroll", onScroll, true);
+    return () => document.removeEventListener("scroll", onScroll, true);
   }, []);
   return (
     <div className="lg:px-[7.5%] section 2xl:px-[10%] lg:min-h-screen lg:pt-0 pt-[15vh] bg-white">
@@ -54,18 +53,18 @@ export const LandingHero = () => {
           vertical
           direction="left"
         >
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
+          <ProjectImage className={"my-6"} />
+          <ProjectImage className={"my-6"} />
+          <ProjectImage className={"my-6"} />
+          <ProjectImage className={"my-6"} />
+          <ProjectImage className={"my-6"} />
+          <ProjectImage className={"my-6"} />
         </InfiniteLooper>
         <div
           ref={textRef}
           className={`lg:-mt-[2.5%] lg:mb-0 lg:mr-0 lg:ml-[5%] lg:max-w-[40%] w-full mx-6 mb-[10%] sm:mx-[7.5%] sm:mb-[10%] hero-text ${
-            isVisible ? 'show-text' : 'hide-text'
-          } ${loadAnimationOnMount ? 'mounted' : 'first-render'}`}
+            isVisible ? "show-text" : "hide-text"
+          } ${loadAnimationOnMount ? "mounted" : "first-render"}`}
         >
           <h1 className="text-6xl pb-8 text-gray-800 font-title font-bold">
             Dream Team for any Software problems
@@ -73,7 +72,7 @@ export const LandingHero = () => {
           <div>
             <p className="text-gray-800 font-body text-lg">
               Bring your brand to life online with a bespoke website that boosts
-              engagement and brings a{' '}
+              engagement and brings a{" "}
               <strong className="text-blue-500">return on creativity.</strong>
             </p>
           </div>
@@ -81,12 +80,12 @@ export const LandingHero = () => {
       </div>
       <InfiniteLooper
         className={`p-4 lg:hidden ${
-          direction === 'left' || !direction
-            ? 'visible relative'
-            : 'invisible absolute'
+          direction === "left" || !direction
+            ? "visible relative"
+            : "invisible absolute"
         }`}
         speed={20}
-        direction={'left'}
+        direction={"left"}
       >
         <SmallProjectImage
           className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
@@ -109,10 +108,10 @@ export const LandingHero = () => {
       </InfiniteLooper>
       <InfiniteLooper
         className={`p-4 lg:hidden ${
-          direction === 'right' ? 'visible relative' : 'invisible absolute'
+          direction === "right" ? "visible relative" : "invisible absolute"
         }`}
         speed={20}
-        direction={'right'}
+        direction={"right"}
       >
         <SmallProjectImage
           className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}

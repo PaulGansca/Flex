@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import '../styles/Navbar.css';
-
-// const { BrowserRouter, NavLink, Route, Switch } = ReactRouterDOM;
+import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [showNavbar, setShowNavbar] = React.useState(false);
@@ -10,18 +9,18 @@ export const Navbar = () => {
   const handleShowNavbar = () => {
     if (!showNavbar) {
       document
-        .querySelectorAll('.overlay-menu li')
+        .querySelectorAll(".overlay-menu li")
         .forEach(function (i, index) {
           setTimeout(function () {
-            i.classList.add('animation');
+            i.classList.add("animation");
           }, (index + 1) * 50);
         });
     } else {
       document
-        .querySelectorAll('.overlay-menu li')
+        .querySelectorAll(".overlay-menu li")
         .forEach(function (i, index) {
           setTimeout(function () {
-            i.classList.remove('animation');
+            i.classList.remove("animation");
           }, (index + 1) * 100);
         });
     }
@@ -38,31 +37,31 @@ export const Navbar = () => {
         <div className="nav-wrapper font-title">
           <div
             className={`logo ${
-              loadAnimationOnMount ? 'mounted' : 'first-render'
+              loadAnimationOnMount ? "mounted" : "first-render"
             }`}
           >
-            <a href="#home">
+            <Link to="/">
               <i className="fas fa-chess-knight"></i> FLEX
-            </a>
+            </Link>
           </div>
 
           <ul
             className={`${
-              loadAnimationOnMount ? 'mounted' : 'first-render'
+              loadAnimationOnMount ? "mounted" : "first-render"
             } desktop-navbar-list`}
             id="menu"
           >
             <li>
-              <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link to="/our-work">Our Work</Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link to="/contact">contact</Link>
             </li>
           </ul>
         </div>
@@ -73,19 +72,27 @@ export const Navbar = () => {
         <span className="icon icon-bars overlay"></span>
       </div>
 
-      <div className={`overlay-menu ${showNavbar ? 'show' : ''}`}>
+      <div className={`overlay-menu ${showNavbar ? "show" : ""}`}>
         <ul id="menu">
           <li>
-            <a href="#home">Home</a>
+            <Link to="/" onClick={handleShowNavbar}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <Link to="/our-work" onClick={handleShowNavbar}>
+              Our Work
+            </Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="/about" onClick={handleShowNavbar}>
+              About
+            </Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="/contact" onClick={handleShowNavbar}>
+              contact
+            </Link>
           </li>
         </ul>
       </div>
