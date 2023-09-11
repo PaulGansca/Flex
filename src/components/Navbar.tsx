@@ -16,6 +16,7 @@ export const Navbar = () => {
           }, (index + 1) * 50);
         });
     } else {
+      window.scrollTo(0, 0);
       document
         .querySelectorAll(".overlay-menu li")
         .forEach(function (i, index) {

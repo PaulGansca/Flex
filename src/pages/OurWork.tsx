@@ -9,7 +9,7 @@ const OurWorkPage = () => {
     useLoadAnimation();
 
   return (
-    <div ref={ref} className="h-full flex m-20 flex-wrap ">
+    <div ref={ref} className="h-full flex m-20 max-lg:mx-0 flex-wrap">
       <div
         className={`w-full flex max-md:flex-col text-black items-center ${
           loadAnimationOnMount ? "mounted" : "first-render"
@@ -29,16 +29,19 @@ const OurWorkPage = () => {
           </p>
         </div>
       </div>
-      <div className="lg:px-[12%] px-[7.5%] bg-white relative text-black">
+      <div
+        ref={ref2}
+        className="lg:px-[12%] px-[7.5%] bg-white relative text-black"
+      >
         <div
-          ref={ref2}
-          className="flex justify-around sm:justify-start items-start flex-wrap"
+          className={`flex justify-around sm:justify-start items-start flex-wrap ${
+            loadAnimationOnMount2 ? "mounted" : "first-render"
+          }`}
         >
-          <div
-            className={`flex flex-wrap justify-between items-center w-full pt-4 pb-20 sm:pb-60 ${
-              loadAnimationOnMount2 ? "mounted" : "first-render"
-            }`}
-          >
+          <h1 className="font-title text-6xl mx-auto text-center my-24">
+            Featured Projects
+          </h1>
+          <div className="flex flex-wrap justify-between items-center w-full pt-4 pb-20 sm:pb-60">
             <FeaturedProject
               img={Gocek}
               title={"Gocek Turizsm"}
