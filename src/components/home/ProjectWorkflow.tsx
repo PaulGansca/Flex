@@ -73,7 +73,7 @@ export const ProjectWorkflow = () => {
       </div>
       <div className="flex justify-around sm:justify-start items-start flex-wrap">
         <h1 className="font-title text-6xl mt-24">Featured Projects</h1>
-        <div className="flex flex-wrap justify-between items-center w-full pt-4 pb-20 sm:pb-60">
+        <div className="flex flex-wrap justify-between items-center w-full pt-4">
           <FeaturedProject
             img={Gocek}
             title={"Gocek Turizsm"}

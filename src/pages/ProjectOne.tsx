@@ -4,8 +4,6 @@ import useLoadAnimation from "../hooks/useLoadAnimation";
 
 const ProjectOnePage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
-  const { loadAnimationOnMount: loadAnimationOnMount2, ref: ref2 } =
-    useLoadAnimation();
   const slideshowData: ProjectImage[] = [
     { id: 0, imageLocation: Gocek },
     { id: 1, imageLocation: Gocek },
@@ -13,23 +11,14 @@ const ProjectOnePage = () => {
   ];
 
   return (
-    <div ref={ref} className="h-full flex m-20 max-lg:mx-0 flex-wrap">
-      <div
-        className={`w-full flex max-md:flex-col text-black items-center ${
-          loadAnimationOnMount ? "mounted" : "first-render"
-        }`}
-      >
-        <h1 className="m-auto font-bold text-[100px] leading-[120px]">
-          Project 1
-        </h1>
-      </div>
-      <div
-        ref={ref2}
-        className="lg:px-[12%] px-[7.5%] bg-white relative text-black"
-      >
+    <div
+      ref={ref}
+      className="h-full flex mt-20 max-lg:mx-0 flex-wrap lg:px-[12%] px-[7.5%] bg-white relative text-black"
+    >
+      <div>
         <div
           className={`flex justify-around sm:justify-start items-start flex-wrap ${
-            loadAnimationOnMount2 ? "mounted" : "first-render"
+            loadAnimationOnMount ? "mounted" : "first-render"
           }`}
         >
           <img className="w-full h-full" src={Gocek} />

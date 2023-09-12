@@ -11,7 +11,7 @@ const OurWorkPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div ref={ref} className="h-full flex m-20 max-lg:mx-0 flex-wrap">
+    <div ref={ref} className="h-full flex mt-20 max-lg:mx-0 flex-wrap">
       <div
         className={`w-full flex max-md:flex-col text-black items-center ${
           loadAnimationOnMount ? "mounted" : "first-render"
@@ -43,7 +43,7 @@ const OurWorkPage = () => {
           <h1 className="font-title text-6xl mx-auto text-center my-24">
             Featured Projects
           </h1>
-          <div className="flex flex-wrap justify-between items-center w-full pt-4 pb-20 sm:pb-60">
+          <div className="flex flex-wrap justify-between items-center w-full pt-4">
             <FeaturedProject
               img={Gocek}
               title={"Gocek Turizsm"}
