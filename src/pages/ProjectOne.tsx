@@ -11,13 +11,10 @@ const ProjectOnePage = () => {
   ];
 
   return (
-    <div
-      ref={ref}
-      className="h-full flex mt-20 max-lg:mx-0 flex-wrap lg:px-[12%] px-[7.5%] bg-white relative text-black"
-    >
-      <div>
+    <div ref={ref} className="h-full flex mt-20  flex-wrap">
+      <div className="max-lg:mx-0 bg-white relative text-black">
         <div
-          className={`flex justify-around sm:justify-start items-start flex-wrap ${
+          className={`flex lg:px-[12%] px-[7.5%] justify-around sm:justify-start items-start flex-wrap ${
             loadAnimationOnMount ? "mounted" : "first-render"
           }`}
         >
@@ -48,8 +45,8 @@ const ProjectOnePage = () => {
               </div>
             </div>
           </div>
-          <SlideShow data={slideshowData} />
         </div>
+        <SlideShow data={slideshowData} />
       </div>
     </div>
   );
