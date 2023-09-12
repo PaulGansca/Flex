@@ -2,11 +2,13 @@ import { FeaturedProject } from "../components/FeaturedProject";
 import Gocek from "../assets/Gocek.jpg";
 import BodySculpt from "../assets/WorkoutPage.jpg";
 import useLoadAnimation from "../hooks/useLoadAnimation";
+import { useNavigate } from "react-router-dom";
 
 const OurWorkPage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
   const { loadAnimationOnMount: loadAnimationOnMount2, ref: ref2 } =
     useLoadAnimation();
+  const navigate = useNavigate();
 
   return (
     <div ref={ref} className="h-full flex m-20 max-lg:mx-0 flex-wrap">
@@ -49,6 +51,7 @@ const OurWorkPage = () => {
                 "We crafted a beautiful & responsive website that's easy to use for yacht renting, Gocek Turism"
               }
               width="w-full"
+              onClick={() => navigate("/our-work/project-1")}
               height="h-full"
             />
             <FeaturedProject
