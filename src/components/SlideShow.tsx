@@ -59,8 +59,8 @@ const SlideShow = ({ data }: { data: ProjectImage[] }) => {
   };
 
   return (
-    <div className="mt-20 h-[350px] w-full cursor-pointer overflow-hidden">
-      <div className="w-full cursor-pointer overflow-hidden aspect-[3/1]">
+    <div className="mt-20  w-full cursor-pointer overflow-hidden">
+      <div className="w-full h-full cursor-pointer overflow-hidden aspect-[3/1]">
         <AnimatePresence initial={true}>
           <motion.div
             variants={variants}
