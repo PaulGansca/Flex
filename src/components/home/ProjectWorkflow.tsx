@@ -4,9 +4,12 @@ import { FeaturedProject } from "../FeaturedProject";
 import Gocek from "../../assets/Gocek.jpg";
 import BodySculpt from "../../assets/WorkoutPage.jpg";
 import useLoadAnimation from "../../hooks/useLoadAnimation";
+import { useNavigate } from "react-router-dom";
 
 export const ProjectWorkflow = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
+  const navigate = useNavigate();
+
   return (
     <div
       ref={ref}
@@ -70,10 +73,11 @@ export const ProjectWorkflow = () => {
       </div>
       <div className="flex justify-around sm:justify-start items-start flex-wrap">
         <h1 className="font-title text-6xl mt-24">Featured Projects</h1>
-        <div className="flex flex-wrap justify-between items-center w-full pt-4 pb-20 sm:pb-60">
+        <div className="flex flex-wrap justify-between items-center w-full pt-4">
           <FeaturedProject
             img={Gocek}
             title={"Gocek Turizsm"}
+            onClick={() => navigate("/our-work/project-1")}
             content={
               "We crafted a beautiful & responsive website that's easy to use for yacht renting, Gocek Turism"
             }

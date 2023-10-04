@@ -4,16 +4,21 @@ export const FeaturedProject = ({
   title,
   content,
   img,
+  onClick,
 }: {
   width: string;
   height: string;
   title: string;
   content: string;
+  onClick?: () => void;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   img: any;
 }) => {
   return (
-    <div className="w-full sm:w-[47%] md:w-[49% - 2rem] mb-12 group">
+    <div
+      className="w-full sm:w-[47%] md:w-[49% - 2rem] mb-12 group"
+      onClick={onClick}
+    >
       <div
         className={`${width} ${height} p-0 relative overflow-hidden bg-cover bg-no-repeat`}
       >

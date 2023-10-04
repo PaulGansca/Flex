@@ -2,14 +2,16 @@ import { FeaturedProject } from "../components/FeaturedProject";
 import Gocek from "../assets/Gocek.jpg";
 import BodySculpt from "../assets/WorkoutPage.jpg";
 import useLoadAnimation from "../hooks/useLoadAnimation";
+import { useNavigate } from "react-router-dom";
 
 const OurWorkPage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
   const { loadAnimationOnMount: loadAnimationOnMount2, ref: ref2 } =
     useLoadAnimation();
+  const navigate = useNavigate();
 
   return (
-    <div ref={ref} className="h-full flex m-20 max-lg:mx-0 flex-wrap">
+    <div ref={ref} className="h-full flex mt-20 max-lg:mx-0 flex-wrap">
       <div
         className={`w-full flex max-md:flex-col text-black items-center ${
           loadAnimationOnMount ? "mounted" : "first-render"
@@ -41,7 +43,7 @@ const OurWorkPage = () => {
           <h1 className="font-title text-6xl mx-auto text-center my-24">
             Featured Projects
           </h1>
-          <div className="flex flex-wrap justify-between items-center w-full pt-4 pb-20 sm:pb-60">
+          <div className="flex flex-wrap justify-between items-center w-full pt-4">
             <FeaturedProject
               img={Gocek}
               title={"Gocek Turizsm"}
@@ -49,6 +51,7 @@ const OurWorkPage = () => {
                 "We crafted a beautiful & responsive website that's easy to use for yacht renting, Gocek Turism"
               }
               width="w-full"
+              onClick={() => navigate("/our-work/project-1")}
               height="h-full"
             />
             <FeaturedProject
