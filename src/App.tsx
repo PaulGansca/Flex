@@ -1,8 +1,9 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import HomePage from "./pages/Home";
-import OurWorkPage from "./pages/OurWork";
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import HomePage from './pages/Home';
+import OurWorkPage from './pages/OurWork';
+import { Contact } from './pages/Contact';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="our-work" element={<OurWorkPage />} />
-          {/* <Route path="contact" element={<Contact />} /> */}
+          <Route path="contact" element={<Contact />} />
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
       </Routes>
