@@ -1,8 +1,8 @@
-import { FeaturedProject } from "../components/FeaturedProject";
-import Gocek from "../assets/Gocek.jpg";
-import BodySculpt from "../assets/WorkoutPage.jpg";
-import useLoadAnimation from "../hooks/useLoadAnimation";
-import { useNavigate } from "react-router-dom";
+import { FeaturedProject } from '../components/FeaturedProject';
+import Gocek from '../assets/Gocek.jpg';
+import BodySculpt from '../assets/WorkoutPage.jpg';
+import useLoadAnimation from '../hooks/useLoadAnimation';
+import { useNavigate } from 'react-router-dom';
 
 const OurWorkPage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
@@ -11,14 +11,14 @@ const OurWorkPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div ref={ref} className="h-full flex mt-20 max-lg:mx-0 flex-wrap">
+    <div ref={ref} className="h-full flex md:mt-40 mt-28 max-lg:mx-0 flex-wrap">
       <div
         className={`w-full flex max-md:flex-col text-black items-center ${
-          loadAnimationOnMount ? "mounted" : "first-render"
+          loadAnimationOnMount ? 'mounted' : 'first-render'
         }`}
       >
         <h1 className=" max-lg:pl-0 pl-[10%] m-auto w-[130px] font-bold text-[100px] leading-[120px]">
-          {"FL\nEX"}
+          {'FL\nEX'}
         </h1>
         <div className="max-w-[400px] max-lg:max-w-[300px] m-auto px-4">
           <h1 className="font-bold  mb-8 leading-[50px] text-4xl sm:text-5xl lg:text-6xl font-title ">
@@ -37,7 +37,7 @@ const OurWorkPage = () => {
       >
         <div
           className={`flex justify-around sm:justify-start items-start flex-wrap ${
-            loadAnimationOnMount2 ? "mounted" : "first-render"
+            loadAnimationOnMount2 ? 'mounted' : 'first-render'
           }`}
         >
           <h1 className="font-title text-6xl mx-auto text-center my-24">
@@ -46,19 +46,19 @@ const OurWorkPage = () => {
           <div className="flex flex-wrap justify-between items-center w-full pt-4">
             <FeaturedProject
               img={Gocek}
-              title={"Gocek Turizsm"}
+              title={'Gocek Turizsm'}
               content={
                 "We crafted a beautiful & responsive website that's easy to use for yacht renting, Gocek Turism"
               }
               width="w-full"
-              onClick={() => navigate("/our-work/project-1")}
+              onClick={() => navigate('/our-work/project-1')}
               height="h-full"
             />
             <FeaturedProject
               img={BodySculpt}
-              title={"Body Sculpt"}
+              title={'Body Sculpt'}
               content={
-                "We put together a solution for helping people get in shape effectively, BodySculpt"
+                'We put together a solution for helping people get in shape effectively, BodySculpt'
               }
               width="w-full"
               height="h-full"
