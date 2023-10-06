@@ -83,13 +83,9 @@ export const LandingHero = () => {
         </div>
       </div>
       <InfiniteLooper
-        className={`p-4 lg:hidden ${
-          direction === 'left' || !direction
-            ? 'visible relative'
-            : 'invisible absolute'
-        }`}
+        className={`p-4 lg:hidden `}
         speed={20}
-        direction={'left'}
+        direction={direction || 'left'}
       >
         <SmallProjectImage
           className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
@@ -110,7 +106,7 @@ export const LandingHero = () => {
           className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
         />
       </InfiniteLooper>
-      <InfiniteLooper
+      {/* <InfiniteLooper
         className={`p-4 lg:hidden ${
           direction === 'right' ? 'visible relative' : 'invisible absolute'
         }`}
@@ -135,7 +131,7 @@ export const LandingHero = () => {
         <SmallProjectImage
           className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
         />
-      </InfiniteLooper>
+      </InfiniteLooper> */}
     </div>
   );
 };
