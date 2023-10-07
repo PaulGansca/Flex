@@ -1,0 +1,166 @@
+@layer diamonds {
+  .diamond-container {
+    --sq: 200px;
+    --sq-gap: 1rem;
+    --max-width: 325px;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+  }
+  .diamond-border {
+    border: 2px solid var(--cyan);
+  }
+  .diamonds li {
+    list-style: none;
+    width: var(--sq);
+    height: var(--sq);
+    margin-bottom: var(--sq-gap);
+  }
+
+  .diamonds li:nth-child(odd) {
+    transform: rotate(4deg);
+  }
+  .diamonds li:nth-child(even) {
+    transform: rotate(-6deg);
+  }
+  .diamonds li:first-child {
+    background: url('../assets/question-mark-svgrepo-com.svg');
+    background-size: contain;
+  }
+  .diamonds li:nth-child(2) {
+    background-image: url('../assets/IMG_7976.jpg');
+    background-size: contain;
+    background-position-x: center;
+  }
+  .diamonds li:nth-child(3) {
+    background-image: url('../assets/question-mark-svgrepo-com.svg');
+    background-size: contain;
+  }
+  .diamonds li:nth-child(4) {
+    background-image: url('../assets/question-mark-svgrepo-com.svg');
+    background-size: contain;
+  }
+  .diamonds li:nth-child(5) {
+    background-image: url('../assets/notativo.jpeg');
+    background-size: contain;
+  }
+  .diamonds li:nth-child(6) {
+    background-image: url('../assets/question-mark-svgrepo-com.svg');
+    background-size: contain;
+  }
+  .diamonds li:nth-child(7) {
+    background-image: url('../assets/question-mark-svgrepo-com.svg');
+    background-size: contain;
+  }
+  .diamonds li:nth-child(8) {
+    background-image: url('../assets/robicu.jpeg');
+    background-size: contain;
+  }
+  .diamonds li:nth-child(9) {
+    background-image: url('../assets/question-mark-svgrepo-com.svg');
+    background-size: contain;
+  }
+  .diamonds li:nth-child(10) {
+    background-image: url('../assets/question-mark-svgrepo-com.svg');
+    background-size: contain;
+    margin-top: calc(-0.5 * var(--sq) - (0.5 * var(--sq-gap)));
+  }
+
+  .diamonds.isActive :not(.isActive) {
+    opacity: 0.4;
+    transition: ease-in-out 300ms;
+  }
+
+  @media (min-width: 324px) {
+    .diamond-container {
+      --sq: 150px;
+      --sq-gap: 3px;
+      --max-width: 305px;
+    }
+    .diamond-border {
+      margin-left: 16vw;
+      margin-top: 15vh;
+    }
+    /* turn off image rotation */
+    .diamonds li:nth-child(odd) {
+      transform: rotate(0deg);
+    }
+    .diamonds li:nth-child(even) {
+      transform: rotate(0deg);
+    }
+    /* start with the diamonds in a basic flexbox layout */
+    .diamonds {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: var(--sq-gap);
+      padding-left: calc(0.5 * var(--sq));
+      padding-top: calc(0.5 * var(--sq));
+    }
+    /* display as diamonds and make them overlap a bit */
+    .diamonds li {
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      margin-left: calc(-0.5 * var(--sq));
+      margin-bottom: 0;
+    }
+
+    /* For every 3rd diamond, starting with the second, pull it up in space from its current location */
+    .diamonds li:nth-child(3n + 2) {
+      margin-top: calc((-0.5 * var(--sq)) - (0.5 * var(--sq-gap)));
+    }
+  }
+
+  /* at the next breakpoint, just change the variables to make things bigger */
+  @media (min-width: 550px) {
+    .diamond-container {
+      --sq: 200px;
+      --sq-gap: 4px;
+      --max-width: 400px;
+    }
+    .diamond-border {
+      margin-top: 20vh;
+    }
+  }
+  @media (min-width: 650px) {
+    .diamond-container {
+      --sq: 250px;
+      --sq-gap: 6px;
+      --max-width: 550px;
+    }
+  }
+  @media (min-width: 750px) {
+    .diamond-container {
+      --sq: 250px;
+      --sq-gap: 6px;
+      --max-width: 500px;
+    }
+    .diamond-border {
+      margin-left: 20vw;
+    }
+  }
+  /* at the next breakpoint, just change the variables to make things bigger */
+  @media (min-width: 1024px) {
+    .diamond-container {
+      --sq: 150px;
+      --sq-gap: 3px;
+      --max-width: 300px;
+    }
+    .diamond-border {
+      margin-top: 0;
+      margin-left: 10vw;
+    }
+  }
+  @media (min-width: 1280px) {
+    .diamond-container {
+      --sq: 200px;
+      --sq-gap: 6px;
+      --max-width: 550px;
+    }
+  }
+  @media (min-width: 1579px) {
+    .diamond-container {
+      --sq: 250px;
+      --sq-gap: 6px;
+      --max-width: 600px;
+    }
+  }
+}

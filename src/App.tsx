@@ -6,6 +6,7 @@ import OurWorkPage from './pages/OurWork';
 import ProjectOnePage from './pages/ProjectOne';
 import ScrollToTop from './util/ScrollToTop';
 import { Contact } from './pages/Contact';
+import AboutPage from './pages/About';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Route path="project-1" element={<ProjectOnePage />} />
           </Route>
           <Route path="contact" element={<Contact />} />
-          {/* <Route path="*" element={<NoPage />} /> */}
+          <Route path="*" element={<AboutPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
