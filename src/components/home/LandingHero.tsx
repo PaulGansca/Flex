@@ -7,9 +7,7 @@ import _ from 'lodash';
 export const LandingHero = () => {
   const [loadAnimationOnMount, setLoadAnimationOnMount] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(true);
-  const [direction, setDirection] = React.useState<'left' | 'right' | null>(
-    null
-  );
+  const [, setDirection] = React.useState<'left' | 'right' | null>(null);
   const textRef = React.useRef<HTMLDivElement | null>(null);
   const lastScrollTop = React.useRef(0);
   const onScroll = () => {
@@ -47,7 +45,7 @@ export const LandingHero = () => {
     document.addEventListener('scroll', onScroll, true);
     return () => document.removeEventListener('scroll', onScroll, true);
   }, []);
-  console.log(direction);
+
   return (
     <div className="lg:px-[7.5%] section 2xl:px-[10%] lg:min-h-screen lg:pt-0 pt-[15vh] bg-white">
       <div className="flex justify-center items-center  pointer-events-none relative landing-hero">
@@ -84,8 +82,8 @@ export const LandingHero = () => {
       </div>
       <InfiniteLooper
         className={`p-4 lg:hidden `}
-        speed={20}
-        direction={direction || 'left'}
+        speed={15}
+        direction={'left'}
       >
         <SmallProjectImage
           className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}

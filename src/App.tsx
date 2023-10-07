@@ -1,10 +1,10 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import HomePage from "./pages/Home";
-import OurWorkPage from "./pages/OurWork";
-import ProjectOnePage from "./pages/ProjectOne";
-import ScrollToTop from "./util/ScrollToTop";
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import HomePage from './pages/Home';
+import OurWorkPage from './pages/OurWork';
+import ProjectOnePage from './pages/ProjectOne';
+import ScrollToTop from './util/ScrollToTop';
 import { Contact } from './pages/Contact';
 
 function App() {
