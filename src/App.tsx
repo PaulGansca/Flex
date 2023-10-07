@@ -7,6 +7,7 @@ import ProjectOnePage from './pages/ProjectOne';
 import ScrollToTop from './util/ScrollToTop';
 import { Contact } from './pages/Contact';
 import AboutPage from './pages/About';
+import ProjectTwoPage from "./pages/ProjectTwo";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="our-work">
             <Route index element={<OurWorkPage />} />
             <Route path="project-1" element={<ProjectOnePage />} />
+            <Route path="project-2" element={<ProjectTwoPage />} />
           </Route>
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<AboutPage />} />

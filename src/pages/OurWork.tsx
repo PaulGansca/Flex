@@ -1,8 +1,9 @@
-import { FeaturedProject } from '../components/FeaturedProject';
 import Gocek from '../assets/Gocek.jpg';
 import BodySculpt from '../assets/WorkoutPage.jpg';
-import useLoadAnimation from '../hooks/useLoadAnimation';
-import { useNavigate } from 'react-router-dom';
+import { FeaturedProject } from "../components/FeaturedProject";
+import Food from "../assets/food1.png";
+import useLoadAnimation from "../hooks/useLoadAnimation";
+import { useNavigate } from "react-router-dom";
 
 const OurWorkPage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
@@ -60,6 +61,16 @@ const OurWorkPage = () => {
               content={
                 'We put together a solution for helping people get in shape effectively, BodySculpt'
               }
+              width="w-full"
+              height="h-full"
+            />
+            <FeaturedProject
+              img={Food}
+              title={"Food Assistant"}
+              content={
+                "Food Assistant, a web app for generating recipe suggestions"
+              }
+              onClick={() => navigate("/our-work/project-2")}
               width="w-full"
               height="h-full"
             />
