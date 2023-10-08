@@ -2,12 +2,11 @@ import React from 'react';
 import { InfiniteLooper } from './ProjectVerticalSlider';
 import { ProjectImage } from './ProjectImage';
 import { SmallProjectImage } from './SmallProjectImage';
-import _ from 'lodash';
 
 export const LandingHero = () => {
   const [loadAnimationOnMount, setLoadAnimationOnMount] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(true);
-  const [, setDirection] = React.useState<'left' | 'right' | null>(null);
+  // const [, setDirection] = React.useState<'left' | 'right' | null>(null);
   const textRef = React.useRef<HTMLDivElement | null>(null);
   const lastScrollTop = React.useRef(0);
   const onScroll = () => {
@@ -19,20 +18,20 @@ export const LandingHero = () => {
     } else {
       setIsVisible(true);
     }
-    if (
-      Number(textRef?.current?.getBoundingClientRect().top) >
-      lastScrollTop.current
-    ) {
-      updateDirection('left');
-    } else {
-      updateDirection('right');
-    }
-    lastScrollTop.current = Number(
-      textRef?.current?.getBoundingClientRect().top
-    );
+    // if (
+    //   Number(textRef?.current?.getBoundingClientRect().top) >
+    //   lastScrollTop.current
+    // ) {
+    //   updateDirection('left');
+    // } else {
+    //   updateDirection('right');
+    // }
+    // lastScrollTop.current = Number(
+    //   textRef?.current?.getBoundingClientRect().top
+    // );
   };
 
-  const updateDirection = _.debounce((val) => setDirection(val), 10);
+  // const updateDirection = _.debounce((val) => setDirection(val), 10);
 
   React.useEffect(() => {
     lastScrollTop.current = Number(
@@ -73,9 +72,10 @@ export const LandingHero = () => {
           </h1>
           <div>
             <p className="text-gray-800 font-body text-lg">
-              Bring your brand to life online with a bespoke website that boosts
-              engagement and brings a{' '}
-              <strong className="text-blue-500">return on creativity.</strong>
+              Welcome to Flex, Where{' '}
+              <strong className="text-blue-500">
+                Digital Dreams Become Reality!
+              </strong>
             </p>
           </div>
         </div>
