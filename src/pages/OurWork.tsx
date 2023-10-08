@@ -1,7 +1,7 @@
 import Gocek from '../assets/Gocek.jpg';
 import BodySculpt from '../assets/WorkoutPage.jpg';
 import { FeaturedProject } from "../components/FeaturedProject";
-import Food from "../assets/food1.png";
+import Food from "../assets/food10.png";
 import useLoadAnimation from "../hooks/useLoadAnimation";
 import { useNavigate } from "react-router-dom";
 

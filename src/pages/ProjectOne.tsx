@@ -1,11 +1,11 @@
-import BodySculpt from '../assets/BodySculpt.jpg';
-import WorkoutLogs from '../assets/workoutlogs.jpg';
-import WorkoutPage from '../assets/WorkoutPage.jpg';
-import ExercisePage from '../assets/ExercisePage.jpg';
-import AccountPage from '../assets/accountpage.jpg';
-import SlideShow2, { ProjectImage } from '../components/SlideShow2';
-import useLoadAnimation from '../hooks/useLoadAnimation';
-import Table from '../components/project-one/table';
+import BodySculpt from "../assets/BodySculpt.jpg";
+import WorkoutLogs from "../assets/workoutlogs.jpg";
+import WorkoutPage from "../assets/WorkoutPage.jpg";
+import ExercisePage from "../assets/ExercisePage.jpg";
+import AccountPage from "../assets/accountpage.jpg";
+import useLoadAnimation from "../hooks/useLoadAnimation";
+import Table from "../components/project-one/table";
+import SlideShow, { ProjectImage } from "../components/SlideShow";
 
 const ProjectOnePage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
@@ -22,7 +22,7 @@ const ProjectOnePage = () => {
       <div className="max-lg:mx-0 bg-white relative text-black">
         <div
           className={`flex lg:px-[12%] px-[7.5%] justify-around sm:justify-start items-start flex-wrap ${
-            loadAnimationOnMount ? 'mounted' : 'first-render'
+            loadAnimationOnMount ? "mounted" : "first-render"
           }`}
         >
           <img className="w-full h-full" src={BodySculpt} />
@@ -169,7 +169,7 @@ const ProjectOnePage = () => {
                   digital experiences.
                 </p>
                 <p>
-                  Ready to embark on your own digital transformation journey?{' '}
+                  Ready to embark on your own digital transformation journey?{" "}
                   <a href="contact.html">Contact us today</a>, and let's make
                   your vision a reality.
                 </p>
@@ -194,8 +194,7 @@ const ProjectOnePage = () => {
             </div>
           </div>
         </div>
-        {/* <SlideShow data={slideshowData} /> */}
-        <SlideShow2 data={slideshowData} />
+        <SlideShow data={slideshowData} />
       </div>
     </div>
   );

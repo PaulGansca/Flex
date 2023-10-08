@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion, PanInfo, Variants } from "framer-motion";
 import useMobileOrTablet from "../hooks/useMobile";
-
+import "./SlideShowStyles.scss";
 const variants: Variants = {
   initial: {
     opacity: 0.2,
@@ -18,14 +18,22 @@ const variants: Variants = {
     zIndex: 20,
   },
 };
+
 export type ProjectImage = {
   id: number;
   imageLocation: string;
+  title?: string;
+  text?: string;
 };
 
 const SlideShow = ({ data }: { data: ProjectImage[] }) => {
   const [selectedItemIndex, setSelectedItemIndex] = useState<number>(0);
   const { isTablet } = useMobileOrTablet();
+  const [activeOption, setActiveOption] = useState<number | null>(0);
+
+  const handleOptionClick = (index: number) => {
+    setActiveOption(index);
+  };
 
   useEffect(() => {
     if (!data?.length) return;
@@ -59,42 +67,67 @@ const SlideShow = ({ data }: { data: ProjectImage[] }) => {
   };
 
   return (
-    <div className="mt-20  w-full cursor-pointer overflow-hidden">
-      <div className="w-full h-full cursor-pointer overflow-hidden aspect-[3/1]">
-        <AnimatePresence initial={true}>
-          <motion.div
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            className="h-full w-full"
-            key={selectedItemIndex}
-            onDragEnd={handleDragEnd}
-            drag={isTablet && data.length > 1 ? "x" : false}
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0}
-          >
-            <img
-              className="w-full h-full object-cover"
-              src={data[selectedItemIndex].imageLocation}
-            />
-          </motion.div>
-        </AnimatePresence>
+    <>
+      <div className="mt-20 w-full mx-auto hidden max-lg:flex cursor-pointer overflow-hidden">
+        <div className="w-full h-1/3 cursor-pointer overflow-hidden aspect-[1.5/1]">
+          <AnimatePresence initial={true}>
+            <motion.div
+              variants={variants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="h-full w-full"
+              key={selectedItemIndex}
+              onDragEnd={handleDragEnd}
+              drag={isTablet && data.length > 1 ? "x" : false}
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0}
+            >
+              <img
+                className="w-full h-full object-[500px 500px]"
+                src={data[selectedItemIndex].imageLocation}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        {data.length > 1 && (
+          <div className="absolute left-1/2 flex -translate-x-1/2 gap-1 bottom-[100px]">
+            {data.map((item, index: number) => (
+              <span
+                key={item?.id}
+                className={twMerge(
+                  "border-transparent h-[2px] w-4 rounded-[20px] bg-[#E6E7EB]",
+                  index === selectedItemIndex && "bg-[#4890E3]"
+                )}
+              ></span>
+            ))}
+          </div>
+        )}
       </div>
-      {data.length > 1 && (
-        <div className="absolute left-1/2 flex -translate-x-1/2 gap-1 bottom-[100px]">
-          {data.map((item, index: number) => (
-            <span
-              key={item?.id}
-              className={twMerge(
-                "border-transparent h-[2px] w-4 rounded-[20px] bg-[#E6E7EB]",
-                index === selectedItemIndex && "bg-[#4890E3]"
-              )}
-            ></span>
+      <div className="flex w-full mt-20  max-lg:hidden">
+        <div className="options mx-auto">
+          {data.map((data) => (
+            <div
+              key={data.id}
+              className={twMerge("option", data.id == activeOption && "active")}
+              onClick={() => handleOptionClick(data.id)}
+              style={{
+                background: `url(${data.imageLocation})`,
+                backgroundSize: "cover",
+              }}
+            >
+              <div className="shadow"></div>
+              <div className="label">
+                <div className="info">
+                  <div className="main">{data.title}</div>
+                  <div className="sub">{data.text}</div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 };
 
