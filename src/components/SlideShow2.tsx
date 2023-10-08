@@ -23,7 +23,8 @@ const SlideShow2 = ({ data }: { data: ProjectImage[] }) => {
             onClick={() => handleOptionClick(data.id)}
             style={{
               background: `url(${data.imageLocation})`,
-              backgroundSize: "550px 500px",
+              backgroundSize: "cover",
+              // backgroundSize: "600px 500px",
             }}
           >
             <div className="shadow"></div>
