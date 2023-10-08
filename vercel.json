@@ -1,4 +1,4 @@
 {
-  "version": 69,
+  "version": 1,
   "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
 }
