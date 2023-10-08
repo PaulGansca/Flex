@@ -1,16 +1,17 @@
-import Gocek from "../assets/Gocek.jpg";
-// import SlideShow, { ProjectImage } from "../components/SlideShow";
+import food1 from "../assets/food1.png";
+import food2 from "../assets/food2.png";
+import food3 from "../assets/food3.png";
 import SlideShow2, { ProjectImage } from "../components/SlideShow2";
 import useLoadAnimation from "../hooks/useLoadAnimation";
 
-const ProjectOnePage = () => {
+const ProjectTwoPage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
   const slideshowData: ProjectImage[] = [
-    { id: 0, imageLocation: Gocek },
-    { id: 1, imageLocation: Gocek },
-    { id: 2, imageLocation: Gocek },
-    { id: 4, imageLocation: Gocek },
-    { id: 5, imageLocation: Gocek },
+    { id: 0, imageLocation: food1 },
+    { id: 1, imageLocation: food2 },
+    { id: 2, imageLocation: food3 },
+    { id: 3, imageLocation: food3 },
+    { id: 4, imageLocation: food3 },
   ];
 
   return (
@@ -21,7 +22,7 @@ const ProjectOnePage = () => {
             loadAnimationOnMount ? "mounted" : "first-render"
           }`}
         >
-          <img className="w-full h-full" src={Gocek} />
+          <img className="w-full h-full" src={food1} />
           <div className="flex max-md:flex-col flex-row items-center justify-between w-full mt-20">
             <div className="mr-32 max-md:mr-0">
               <h2 className="font-bold text-3xl mb-5">Case Study:</h2>
@@ -49,11 +50,10 @@ const ProjectOnePage = () => {
             </div>
           </div>
         </div>
-        {/* <SlideShow data={slideshowData} /> */}
         <SlideShow2 data={slideshowData} />
       </div>
     </div>
   );
 };
 
-export default ProjectOnePage;
+export default ProjectTwoPage;
