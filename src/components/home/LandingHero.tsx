@@ -4,6 +4,9 @@ import { ProjectImage } from './ProjectImage';
 import { SmallProjectImage } from './SmallProjectImage';
 import Marquee from 'react-fast-marquee';
 import _ from 'lodash';
+import Gocek from '../../assets/Gocek.jpg';
+import WorkoutPage from '../../assets/WorkoutPage.jpg';
+import FoodApp from '../../assets/food1.png';
 
 export const LandingHero = () => {
   const [loadAnimationOnMount, setLoadAnimationOnMount] = React.useState(false);
@@ -58,12 +61,12 @@ export const LandingHero = () => {
           vertical
           direction="left"
         >
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
-          <ProjectImage className={'my-6'} />
+          <ProjectImage img={Gocek} className={'my-6'} />
+          <ProjectImage img={FoodApp} className={'my-6'} />
+          <ProjectImage img={WorkoutPage} className={'my-6'} />
+          <ProjectImage img={Gocek} className={'my-6'} />
+          <ProjectImage img={FoodApp} className={'my-6'} />
+          <ProjectImage img={WorkoutPage} className={'my-6'} />
         </InfiniteLooper>
         <div
           ref={textRef}
@@ -91,21 +94,27 @@ export const LandingHero = () => {
           direction={direction === 'right' ? 'right' : 'left'}
         >
           <SmallProjectImage
+            img={Gocek}
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
           <SmallProjectImage
+            img={FoodApp}
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
           <SmallProjectImage
+            img={WorkoutPage}
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
           <SmallProjectImage
+            img={Gocek}
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
           <SmallProjectImage
+            img={FoodApp}
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
           <SmallProjectImage
+            img={WorkoutPage}
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
         </Marquee>
