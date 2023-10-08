@@ -64,8 +64,8 @@ export const LandingHero = () => {
         <div
           ref={textRef}
           className={`lg:-mt-[2.5%] lg:mb-0 lg:mr-0 lg:ml-[5%] lg:max-w-[40%] w-full mx-6 mb-[10%] sm:mx-[7.5%] sm:mb-[10%] hero-text ${
-            isVisible ? 'show-text' : 'hide-text'
-          } ${loadAnimationOnMount ? 'mounted' : 'first-render'}`}
+            loadAnimationOnMount ? 'mounted' : 'first-render'
+          }`}
         >
           <h1 className="text-6xl pb-8 text-gray-800 font-title font-bold">
             Dream Team for any Software problems
@@ -84,6 +84,7 @@ export const LandingHero = () => {
         className={`p-4 lg:hidden `}
         speed={15}
         direction={'left'}
+        vertical={false}
       >
         <SmallProjectImage
           className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
