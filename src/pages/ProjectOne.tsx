@@ -1,5 +1,6 @@
 import Gocek from "../assets/Gocek.jpg";
-import SlideShow, { ProjectImage } from "../components/SlideShow";
+// import SlideShow, { ProjectImage } from "../components/SlideShow";
+import SlideShow2, { ProjectImage } from "../components/SlideShow2";
 import useLoadAnimation from "../hooks/useLoadAnimation";
 
 const ProjectOnePage = () => {
@@ -8,6 +9,8 @@ const ProjectOnePage = () => {
     { id: 0, imageLocation: Gocek },
     { id: 1, imageLocation: Gocek },
     { id: 2, imageLocation: Gocek },
+    { id: 4, imageLocation: Gocek },
+    { id: 5, imageLocation: Gocek },
   ];
 
   return (
@@ -46,7 +49,8 @@ const ProjectOnePage = () => {
             </div>
           </div>
         </div>
-        <SlideShow data={slideshowData} />
+        {/* <SlideShow data={slideshowData} /> */}
+        <SlideShow2 data={slideshowData} />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import food1 from "../assets/food1.png";
 import food2 from "../assets/food2.png";
 import food3 from "../assets/food3.png";
-import SlideShow, { ProjectImage } from "../components/SlideShow";
+import SlideShow2, { ProjectImage } from "../components/SlideShow2";
 import useLoadAnimation from "../hooks/useLoadAnimation";
 
 const ProjectTwoPage = () => {
@@ -10,6 +10,8 @@ const ProjectTwoPage = () => {
     { id: 0, imageLocation: food1 },
     { id: 1, imageLocation: food2 },
     { id: 2, imageLocation: food3 },
+    { id: 3, imageLocation: food3 },
+    { id: 4, imageLocation: food3 },
   ];
 
   return (
@@ -48,7 +50,7 @@ const ProjectTwoPage = () => {
             </div>
           </div>
         </div>
-        <SlideShow data={slideshowData} />
+        <SlideShow2 data={slideshowData} />
       </div>
     </div>
   );
