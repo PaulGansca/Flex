@@ -210,7 +210,7 @@ export const ContactForm = () => {
                   formErrors.message ? 'text-red-600' : ''
                 }`}
               >
-                Your message
+                Message
               </label>
             )}
             <textarea
@@ -218,7 +218,7 @@ export const ContactForm = () => {
               rows={5}
               name="message"
               value={formValues.message}
-              className={`block p-2.5 w-full text-sm text-gray-900 outline-none bg-white rounded-lg border border-gray-300  ${
+              className={`block p-2.5 w-full text-sm text-black placeholder:text-black outline-none bg-white rounded-lg border border-gray-300  ${
                 formErrors.message
                   ? 'focus:ring-red-600 focus:border-red-600 border-red-600'
                   : 'focus:border-blue-500 focus:ring-blue-500'
