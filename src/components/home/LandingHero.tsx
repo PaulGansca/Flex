@@ -84,30 +84,32 @@ export const LandingHero = () => {
           </div>
         </div>
       </div>
-      <Marquee
-        className={`p-4 lg:hidden `}
-        speed={70}
-        direction={direction === 'right' ? 'right' : 'left'}
-      >
-        <SmallProjectImage
-          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
-        />
-        <SmallProjectImage
-          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
-        />
-        <SmallProjectImage
-          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
-        />
-        <SmallProjectImage
-          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
-        />
-        <SmallProjectImage
-          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
-        />
-        <SmallProjectImage
-          className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
-        />
-      </Marquee>
+      <div className="lg:hidden">
+        <Marquee
+          style={{ padding: 16, zIndex: 0 }}
+          speed={70}
+          direction={direction === 'right' ? 'right' : 'left'}
+        >
+          <SmallProjectImage
+            className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+          />
+          <SmallProjectImage
+            className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+          />
+          <SmallProjectImage
+            className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+          />
+          <SmallProjectImage
+            className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+          />
+          <SmallProjectImage
+            className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+          />
+          <SmallProjectImage
+            className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
+          />
+        </Marquee>
+      </div>
     </div>
   );
 };
