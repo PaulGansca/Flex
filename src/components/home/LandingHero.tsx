@@ -5,31 +5,31 @@ import { SmallProjectImage } from './SmallProjectImage';
 
 export const LandingHero = () => {
   const [loadAnimationOnMount, setLoadAnimationOnMount] = React.useState(false);
-  const [isVisible, setIsVisible] = React.useState(true);
+  // const [isVisible, setIsVisible] = React.useState(true);
   // const [, setDirection] = React.useState<'left' | 'right' | null>(null);
   const textRef = React.useRef<HTMLDivElement | null>(null);
   const lastScrollTop = React.useRef(0);
-  const onScroll = () => {
-    if (
-      textRef?.current?.getBoundingClientRect() &&
-      textRef?.current?.getBoundingClientRect().top < -300
-    ) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-    // if (
-    //   Number(textRef?.current?.getBoundingClientRect().top) >
-    //   lastScrollTop.current
-    // ) {
-    //   updateDirection('left');
-    // } else {
-    //   updateDirection('right');
-    // }
-    // lastScrollTop.current = Number(
-    //   textRef?.current?.getBoundingClientRect().top
-    // );
-  };
+  // const onScroll = () => {
+  //   if (
+  //     textRef?.current?.getBoundingClientRect() &&
+  //     textRef?.current?.getBoundingClientRect().top < -300
+  //   ) {
+  //     setIsVisible(false);
+  //   } else {
+  //     setIsVisible(true);
+  //   }
+  // if (
+  //   Number(textRef?.current?.getBoundingClientRect().top) >
+  //   lastScrollTop.current
+  // ) {
+  //   updateDirection('left');
+  // } else {
+  //   updateDirection('right');
+  // }
+  // lastScrollTop.current = Number(
+  //   textRef?.current?.getBoundingClientRect().top
+  // );
+  // };
 
   // const updateDirection = _.debounce((val) => setDirection(val), 10);
 
@@ -40,10 +40,10 @@ export const LandingHero = () => {
     setTimeout(() => setLoadAnimationOnMount(true), 10);
   }, []);
 
-  React.useEffect(() => {
-    document.addEventListener('scroll', onScroll, true);
-    return () => document.removeEventListener('scroll', onScroll, true);
-  }, []);
+  // React.useEffect(() => {
+  //   document.addEventListener('scroll', onScroll, true);
+  //   return () => document.removeEventListener('scroll', onScroll, true);
+  // }, []);
 
   return (
     <div className="lg:px-[7.5%] section 2xl:px-[10%] lg:min-h-screen lg:pt-0 pt-[15vh] bg-white">
