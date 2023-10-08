@@ -1,0 +1,132 @@
+const Table = () => {
+  return (
+    <table className="mt-3">
+      <thead>
+        <tr>
+          <th>Participant</th>
+          <th>Q1</th>
+          <th>Q2</th>
+          <th>Q3</th>
+          <th>Q4</th>
+          <th>Q5</th>
+          <th>Q6</th>
+          <th>Q7</th>
+          <th>Q8</th>
+          <th>Q9</th>
+          <th>Q10</th>
+          <th>SUS</th>
+          <th>Usefulness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>User 1</td>
+          <td>5</td>
+          <td>2</td>
+          <td>4</td>
+          <td>4</td>
+          <td>5</td>
+          <td>3</td>
+          <td>5</td>
+          <td>2</td>
+          <td>4</td>
+          <td>1</td>
+          <td>77.5</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>User 2</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5</td>
+          <td>1</td>
+          <td>100</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>User 3</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5</td>
+          <td>2</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5</td>
+          <td>2</td>
+          <td>95</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>User 4</td>
+          <td>4</td>
+          <td>2</td>
+          <td>4</td>
+          <td>1</td>
+          <td>5</td>
+          <td>2</td>
+          <td>4</td>
+          <td>1</td>
+          <td>4</td>
+          <td>1</td>
+          <td>85</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>User 5</td>
+          <td>5</td>
+          <td>3</td>
+          <td>5</td>
+          <td>1</td>
+          <td>5</td>
+          <td>2</td>
+          <td>5</td>
+          <td>2</td>
+          <td>5</td>
+          <td>1</td>
+          <td>92.5</td>
+          <td>9</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Average SUS Score</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>90</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Average Usefulness Rating</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>8.6</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  );
+};
+
+export default Table;

@@ -16,7 +16,7 @@ export const FeaturedProject = ({
 }) => {
   return (
     <div
-      className="w-full sm:w-[47%] md:w-[49% - 2rem] mb-12 group"
+      className="w-full sm:w-[47%] md:w-[49% - 2rem] mb-12 group cursor-pointer"
       onClick={onClick}
     >
       <div

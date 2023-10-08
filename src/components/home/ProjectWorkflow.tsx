@@ -87,6 +87,7 @@ export const ProjectWorkflow = () => {
           <FeaturedProject
             img={BodySculpt}
             title={'Body Sculpt'}
+            onClick={() => navigate('/our-work/project-1')}
             content={
               'We put together a solution for helping people get in shape effectively, BodySculpt'
             }
