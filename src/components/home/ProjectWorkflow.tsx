@@ -1,7 +1,7 @@
 import { WorkflowStep } from "./WorkflowStep";
 import { PlayIcon } from "./PlayIcon";
 import { FeaturedProject } from "../FeaturedProject";
-import Gocek from "../../assets/Gocek.jpg";
+import PubCrawl from "../../assets/mockuper(9).png";
 import BodySculpt from "../../assets/WorkoutPage.jpg";
 import Food from "../../assets/food10.png";
 import useLoadAnimation from "../../hooks/useLoadAnimation";
@@ -76,11 +76,11 @@ export const ProjectWorkflow = () => {
         <h1 className="font-title text-6xl mt-24">Featured Projects</h1>
         <div className="flex flex-wrap justify-between items-center w-full pt-4">
           <FeaturedProject
-            img={Gocek}
-            title={"Gocek Turizsm"}
-            onClick={() => navigate("/our-work/project-1")}
+            img={PubCrawl}
+            title={"Pub Crawl"}
+            onClick={() => navigate("/our-work/project-3")}
             content={
-              "We crafted a beautiful & responsive website that's easy to use for yacht renting, Gocek Turism"
+              "We created a mobile web app, Pub Crawl, enhancing city exploration with curated crawls, user-generated content, and GPS guidance"
             }
             width="w-full"
             height="h-full"

@@ -4,7 +4,7 @@ import { ProjectImage } from "./ProjectImage";
 import { SmallProjectImage } from "./SmallProjectImage";
 import Marquee from "react-fast-marquee";
 import _ from "lodash";
-import Gocek from "../../assets/Gocek.jpg";
+import PubCrawl from "../../assets/mockuper(9).png";
 import WorkoutPage from "../../assets/WorkoutPage.jpg";
 import FoodApp from "../../assets/food10.png";
 
@@ -61,10 +61,10 @@ export const LandingHero = () => {
           vertical
           direction="left"
         >
-          <ProjectImage img={Gocek} className={"my-6"} />
+          <ProjectImage img={PubCrawl} className={"my-6"} />
           <ProjectImage img={FoodApp} className={"my-6"} />
           <ProjectImage img={WorkoutPage} className={"my-6"} />
-          <ProjectImage img={Gocek} className={"my-6"} />
+          <ProjectImage img={PubCrawl} className={"my-6"} />
           <ProjectImage img={FoodApp} className={"my-6"} />
           <ProjectImage img={WorkoutPage} className={"my-6"} />
         </InfiniteLooper>
@@ -94,7 +94,7 @@ export const LandingHero = () => {
           direction={direction === "right" ? "right" : "left"}
         >
           <SmallProjectImage
-            img={Gocek}
+            img={PubCrawl}
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
           <SmallProjectImage
@@ -106,7 +106,7 @@ export const LandingHero = () => {
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
           <SmallProjectImage
-            img={Gocek}
+            img={PubCrawl}
             className={`mx-3 shadow-[1px_1px_12px_3px_rgba(0,0,0,0.4)]`}
           />
           <SmallProjectImage

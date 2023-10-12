@@ -1,13 +1,14 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './pages/Layout';
-import HomePage from './pages/Home';
-import OurWorkPage from './pages/OurWork';
-import ProjectOnePage from './pages/ProjectOne';
-import ScrollToTop from './util/ScrollToTop';
-import { Contact } from './pages/Contact';
-import AboutPage from './pages/About';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import HomePage from "./pages/Home";
+import OurWorkPage from "./pages/OurWork";
+import ProjectOnePage from "./pages/ProjectOne";
+import ScrollToTop from "./util/ScrollToTop";
+import { Contact } from "./pages/Contact";
+import AboutPage from "./pages/About";
 import ProjectTwoPage from "./pages/ProjectTwo";
+import ProjectThreePage from "./pages/ProjectThree";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route index element={<OurWorkPage />} />
             <Route path="project-1" element={<ProjectOnePage />} />
             <Route path="project-2" element={<ProjectTwoPage />} />
+            <Route path="project-3" element={<ProjectThreePage />} />
           </Route>
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<AboutPage />} />

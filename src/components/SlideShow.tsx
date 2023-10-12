@@ -26,7 +26,13 @@ export type ProjectImage = {
   text?: string;
 };
 
-const SlideShow = ({ data }: { data: ProjectImage[] }) => {
+const SlideShow = ({
+  data,
+  nonInteractive,
+}: {
+  data: ProjectImage[];
+  nonInteractive?: boolean;
+}) => {
   const [selectedItemIndex, setSelectedItemIndex] = useState<number>(0);
   const { isTablet } = useMobileOrTablet();
   const [activeOption, setActiveOption] = useState<number | null>(0);
@@ -68,7 +74,12 @@ const SlideShow = ({ data }: { data: ProjectImage[] }) => {
 
   return (
     <>
-      <div className="mt-20 w-full mx-auto hidden max-lg:flex cursor-pointer overflow-hidden">
+      <div
+        className={twMerge(
+          "mt-20 w-full mx-auto hidden max-lg:flex cursor-pointer overflow-hidden",
+          nonInteractive && "flex"
+        )}
+      >
         <div className="w-full h-1/3 cursor-pointer overflow-hidden aspect-[1.5/1]">
           <AnimatePresence initial={true}>
             <motion.div
@@ -104,7 +115,12 @@ const SlideShow = ({ data }: { data: ProjectImage[] }) => {
           </div>
         )}
       </div>
-      <div className="flex w-full mt-20  max-lg:hidden">
+      <div
+        className={twMerge(
+          "flex w-full mt-20  max-lg:hidden ",
+          nonInteractive && "hidden"
+        )}
+      >
         <div className="options mx-auto">
           {data.map((data) => (
             <div
