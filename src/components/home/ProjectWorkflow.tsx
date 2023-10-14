@@ -2,7 +2,7 @@ import { WorkflowStep } from "./WorkflowStep";
 import { PlayIcon } from "./PlayIcon";
 import { FeaturedProject } from "../FeaturedProject";
 import PubCrawl from "../../assets/mockuper(9).png";
-import BodySculpt from "../../assets/WorkoutPage.jpg";
+import BodySculpt from "../../assets/BodySculpt-2.png";
 import Food from "../../assets/food10.png";
 import useLoadAnimation from "../../hooks/useLoadAnimation";
 import { useNavigate, Link } from "react-router-dom";

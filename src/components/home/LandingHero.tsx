@@ -5,7 +5,7 @@ import { SmallProjectImage } from "./SmallProjectImage";
 import Marquee from "react-fast-marquee";
 import _ from "lodash";
 import PubCrawl from "../../assets/mockuper(9).png";
-import WorkoutPage from "../../assets/WorkoutPage.jpg";
+import WorkoutPage from "../../assets/BodySculpt.png";
 import FoodApp from "../../assets/food10.png";
 
 export const LandingHero = () => {
