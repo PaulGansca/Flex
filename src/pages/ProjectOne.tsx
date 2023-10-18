@@ -25,7 +25,7 @@ const ProjectOnePage = () => {
             loadAnimationOnMount ? 'mounted' : 'first-render'
           }`}
         >
-          <img className="mx-auto max-h-[60vh]" src={BodySculpt} />
+          <img className="mx-auto max-h-[60vh] rounded-lg" src={BodySculpt} />
           <div className="flex max-md:flex-col flex-row items-center justify-between w-full mt-20">
             <div className="mr-32 max-md:mr-0">
               <h2 className="font-bold text-3xl mb-5 font-title">
