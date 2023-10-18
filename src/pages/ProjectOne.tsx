@@ -1,11 +1,11 @@
-import BodySculpt from "../assets/BodySculpt.png";
-import WorkoutLogs from "../assets/workoutlogs.jpg";
-import WorkoutPage from "../assets/BodySculpt-2.png";
-import ExercisePage from "../assets/ExercisePage.jpg";
-import AccountPage from "../assets/accountpage.jpg";
-import useLoadAnimation from "../hooks/useLoadAnimation";
-import Table from "../components/project-one/table";
-import SlideShow, { ProjectImage } from "../components/SlideShow";
+import BodySculpt from '../assets/BodySculpt.png';
+import WorkoutLogs from '../assets/workoutlogs.jpg';
+import WorkoutPage from '../assets/BodySculpt-2.png';
+import ExercisePage from '../assets/ExercisePage.jpg';
+import AccountPage from '../assets/accountpage.jpg';
+import useLoadAnimation from '../hooks/useLoadAnimation';
+import Table from '../components/project-one/table';
+import SlideShow, { ProjectImage } from '../components/SlideShow';
 
 const ProjectOnePage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
@@ -22,7 +22,7 @@ const ProjectOnePage = () => {
       <div className="max-lg:mx-0 bg-white relative text-black">
         <div
           className={`flex lg:px-[12%] px-[7.5%] justify-around sm:justify-start items-start flex-wrap ${
-            loadAnimationOnMount ? "mounted" : "first-render"
+            loadAnimationOnMount ? 'mounted' : 'first-render'
           }`}
         >
           <img className="mx-auto max-h-[60vh]" src={BodySculpt} />
@@ -154,7 +154,9 @@ const ProjectOnePage = () => {
                   score computed where a score of 68 is considered above average
                   (Measuringu.com, 2011). Usefulness is a rating given by the
                   user evaluating how useful is the app on a scale of 1-10.
-                  <Table />
+                  <div className="max-w-[80vw] overflow-x-auto">
+                    <Table />
+                  </div>
                 </section>
               </section>
               <section id="conclusion">
@@ -169,7 +171,7 @@ const ProjectOnePage = () => {
                   digital experiences.
                 </p>
                 <p>
-                  Ready to embark on your own digital transformation journey?{" "}
+                  Ready to embark on your own digital transformation journey?{' '}
                   <a href="contact.html">Contact us today</a>, and let's make
                   your vision a reality.
                 </p>

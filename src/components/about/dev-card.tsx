@@ -16,7 +16,7 @@ export const DevCard = ({
       <div className="rounded-xl shadow-lg">
         <div className="bg-gray-200 rounded-t-xl p-4 flex items-center justify-between">
           {title}
-          <div className="flex flex-wrap justify-center text-gray-300">
+          <div className="flex flex-wrap justify-center text-gray-300 z-0">
             <a
               target="_blank"
               href={cv}
