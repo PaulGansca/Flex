@@ -66,14 +66,22 @@ const ProjectThreePage = () => {
                 essence of local nightlife.
               </p>
             </div>
-            <div className="flex flex-col gap-2 w-full max-md:mt-10">
-              <p className=" font-bold text-blue-500 ">Link</p>
-              <p>test</p>
-              <p className="font-bold text-blue-500 ">Link</p>
-              <div className="leading-[20px]">
-                <p className="font-medium">Design</p>
-                <p className="font-medium">Web Dev</p>
-                <p className="font-medium">Mobile App</p>
+            <div className="flex flex-col gap-2 w-full max-md:mt-10 max-md:flex-row max-md:gap-3">
+              <div>
+                <p className=" font-bold text-blue-500 ">Name</p>
+                <p>Pub Crawl</p>
+              </div>
+              <div>
+                <p className=" font-bold text-blue-500 ">Industry</p>
+                <p>Travel & Local</p>
+              </div>
+              <div>
+                <p className="font-bold text-blue-500 ">Link</p>
+                <div className="leading-[20px]">
+                  <p className="font-medium">Design</p>
+                  <p className="font-medium">Web Dev</p>
+                  <p className="font-medium">Mobile App</p>
+                </div>
               </div>
             </div>
           </div>

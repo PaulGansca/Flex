@@ -1,11 +1,11 @@
-import BodySculpt from '../assets/BodySculpt.png';
-import WorkoutLogs from '../assets/workoutlogs.jpg';
-import WorkoutPage from '../assets/BodySculpt-2.png';
-import ExercisePage from '../assets/ExercisePage.jpg';
-import AccountPage from '../assets/accountpage.jpg';
-import useLoadAnimation from '../hooks/useLoadAnimation';
-import Table from '../components/project-one/table';
-import SlideShow, { ProjectImage } from '../components/SlideShow';
+import BodySculpt from "../assets/BodySculpt.png";
+import WorkoutLogs from "../assets/workoutlogs.jpg";
+import WorkoutPage from "../assets/BodySculpt-2.png";
+import ExercisePage from "../assets/ExercisePage.jpg";
+import AccountPage from "../assets/accountpage.jpg";
+import useLoadAnimation from "../hooks/useLoadAnimation";
+import Table from "../components/project-one/table";
+import SlideShow, { ProjectImage } from "../components/SlideShow";
 
 const ProjectOnePage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
@@ -22,7 +22,7 @@ const ProjectOnePage = () => {
       <div className="max-lg:mx-0 bg-white relative text-black">
         <div
           className={`flex lg:px-[12%] px-[7.5%] justify-around sm:justify-start items-start flex-wrap ${
-            loadAnimationOnMount ? 'mounted' : 'first-render'
+            loadAnimationOnMount ? "mounted" : "first-render"
           }`}
         >
           <img className="mx-auto max-h-[60vh] rounded-lg" src={BodySculpt} />
@@ -171,27 +171,33 @@ const ProjectOnePage = () => {
                   digital experiences.
                 </p>
                 <p>
-                  Ready to embark on your own digital transformation journey?{' '}
+                  Ready to embark on your own digital transformation journey?{" "}
                   <a href="contact.html">Contact us today</a>, and let's make
                   your vision a reality.
                 </p>
               </section>
             </div>
-            <div className="flex flex-col gap-2 w-full max-md:mt-10 self-start">
-              <p className=" font-bold text-blue-500 ">Link</p>
-              <a
-                className="cursor-pointer"
-                target="_blank"
-                href="https://body-sculpt-5ab47.web.app"
-              >
-                BodySculpt
-              </a>
-              <p className=" font-bold text-blue-500 ">Indurstry</p>
-              <p>Fitness</p>
-              <p className="font-bold text-blue-500 ">Services</p>
-              <div className="leading-[20px]">
-                <p className="font-medium">Design</p>
-                <p className="font-medium">Web Dev</p>
+            <div className="flex flex-col gap-2 w-full max-md:mt-10 self-start max-md:flex-row max-md:gap-3">
+              <div>
+                <p className=" font-bold text-blue-500 ">Name</p>
+                <a
+                  className="cursor-pointer"
+                  target="_blank"
+                  href="https://body-sculpt-5ab47.web.app"
+                >
+                  BodySculpt
+                </a>
+              </div>
+              <div>
+                <p className=" font-bold text-blue-500 ">Industry</p>
+                <p>Health & Fitness</p>
+              </div>
+              <div>
+                <p className="font-bold text-blue-500 ">Services</p>
+                <div className="leading-[20px]">
+                  <p className="font-medium">Design</p>
+                  <p className="font-medium">Web Dev</p>
+                </div>
               </div>
             </div>
           </div>
