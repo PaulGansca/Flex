@@ -6,7 +6,7 @@ import food10 from "../assets/food10.png";
 import food11 from "../assets/food11.png";
 import useLoadAnimation from "../hooks/useLoadAnimation";
 import SlideShow, { ProjectImage } from "../components/SlideShow";
-import { Link } from "react-router-dom";
+import LinkWithIcon from "../components/LinkWithIcon";
 
 const ProjectTwoPage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
@@ -54,13 +54,10 @@ const ProjectTwoPage = () => {
             <div className="flex flex-col gap-2 w-full max-md:mt-10 max-md:flex-row max-md:gap-3">
               <div>
                 <p className=" font-bold text-blue-500 ">Name</p>
-                <Link
-                  className="cursor-pointer hover:text-blue-700"
-                  target="_blank"
+                <LinkWithIcon
                   to="https://food-assistant-29fb3.web.app/"
-                >
-                  Food Assistant
-                </Link>
+                  text="Food Assistant"
+                />
               </div>
               <div>
                 <p className=" font-bold text-blue-500 ">Industry</p>

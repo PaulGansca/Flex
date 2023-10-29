@@ -6,6 +6,7 @@ import AccountPage from "../assets/accountpage.jpg";
 import useLoadAnimation from "../hooks/useLoadAnimation";
 import Table from "../components/project-one/table";
 import SlideShow, { ProjectImage } from "../components/SlideShow";
+import LinkWithIcon from "../components/LinkWithIcon";
 
 const ProjectOnePage = () => {
   const { loadAnimationOnMount, ref } = useLoadAnimation();
@@ -180,13 +181,10 @@ const ProjectOnePage = () => {
             <div className="flex flex-col gap-2 w-full max-md:mt-10 self-start max-md:flex-row max-md:gap-3">
               <div>
                 <p className=" font-bold text-blue-500 ">Name</p>
-                <a
-                  className="cursor-pointer"
-                  target="_blank"
-                  href="https://body-sculpt-5ab47.web.app"
-                >
-                  BodySculpt
-                </a>
+                <LinkWithIcon
+                  to="https://body-sculpt-5ab47.web.app"
+                  text="BodySculpt"
+                />
               </div>
               <div>
                 <p className=" font-bold text-blue-500 ">Industry</p>
